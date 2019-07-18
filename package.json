@@ -1,0 +1,32 @@
+{
+  "private": true,
+  "name": "components-as-data-presentation",
+  "version": "2.4.0",
+  "scripts": {
+    "start": "mdx-deck deck.mdx",
+    "build": "mdx-deck build deck.mdx",
+    "start-graphql": "nodemon ./graphqlExample/index.js localhost 4000",
+    "help": "mdx-deck"
+  },
+  "devDependencies": {
+    "mdx-deck": "^2.4.0",
+    "nodemon": "1.18.4"
+  },
+  "dependencies": {
+    "apollo-server": "2.6.9",
+    "code-surfer": "2.0.0-alpha.9",
+    "graphql": "14.4.2",
+    "graphql-voyager": "1.0.0-rc.27",
+    "raw-loader": "3.0.0",
+    "react-spring": "8.0.25",
+    "styled-components": "4.3.2"
+  },
+  "keywords": [
+    "api",
+    "graphql",
+    "rest",
+    "mdx-deck",
+    "react"
+  ],
+  "description": "Components as Data: A Cross Platform GraphQL Powered Component API"
+}

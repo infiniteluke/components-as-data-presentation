@@ -1,0 +1,48 @@
+interface ComponentData {
+  instanceID: ID! @uniqueID
+}
+
+interface Component {
+  component: String!
+  treatment: String
+  data: ComponentData!
+  children: [Component]
+}
+
+type VideoTile implements Component {
+  component: String! @resolveToParentType
+  data: VideoData
+}
+
+type VideoData implements ComponentData {
+  image: String!
+  title: String!
+  secondaryTitle: String!
+  percentViewed: Float
+}
+
+type SeriesTile implements Component {
+  component: String! @resolveToParentType
+  data: SeriesData
+}
+
+type SeriesData implements ComponentData {
+  image: String!
+  title: String!
+  secondaryTitle: String!
+  favoriteId: String
+}
+
+union Tile = VideoTile | SeriesTile
+
+type ShelfData implements ComponentData {
+  title: String
+}
+
+type Shelf implements Section & Component {
+  component: String! @resolveToParentType
+  treatment: String
+  children: [Tile]
+  data: ShelfData
+}
+
