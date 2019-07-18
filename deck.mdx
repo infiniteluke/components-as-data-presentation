@@ -62,26 +62,21 @@ import './global.css'
 ---
 
 <Center>
-<Split>
-<div style={{display: 'grid', gridGap: '0 2em', justifyItems: 'center', alignItems: 'center'}}>
-  <Hero style={{width:'10em', height: '5em', gridRow:'1/2', gridColumn:'1/2'}} />
-  <Appear>
-    <TeaserImage style={{width:'4em', height: '4em', gridRow:'2/3', gridColumn:'1/2' }} />
-    <TeaserText style={{width:'10em', height: '3em', gridRow:'3/4', gridColumn:'1/2'}} />
-  </Appear>
-
-<h2 style={{gridRow:'1/2', gridColumn:'2/3'}}>Hero</h2>
-
-<Appear>
-  <h2 style={{gridRow:'2/3', gridColumn:'2/3'}}>Image</h2>
-  <h2 style={{gridRow:'3/4', gridColumn:'2/3'}}>Teaser</h2>
-</Appear>
-
-</div>
-
-</Split>
+  <Split>
+    <div style={{display: 'grid', gridGap: '0 2em', justifyItems: 'center', alignItems: 'center'}}>
+      <Hero style={{width:'8em', height: '4em', gridRow:'1/2', gridColumn:'1/2'}} />
+      <Appear>
+        <TeaserImage style={{width:'4em', height: '4em', gridRow:'2/3', gridColumn:'1/2' }} />
+        <TeaserText style={{width:'8em', height: '3em', gridRow:'3/4', gridColumn:'1/2'}} />
+      </Appear>
+      <h2 style={{gridRow:'1/2', gridColumn:'2/3', color: '#00CCFF'}}>Hero</h2>
+      <Appear>
+        <h2 style={{gridRow:'2/3', gridColumn:'2/3', color: '#FF19FF'}}>Image</h2>
+        <h2 style={{gridRow:'3/4', gridColumn:'2/3', color: '#0DE22B'}}>Teaser</h2>
+      </Appear>
+    </div>
+  </Split>
 </Center>
-
 
 ---
 <TopCenter><h1>Components Win</h1></TopCenter>
@@ -124,13 +119,14 @@ Declarative representation of UI
 </div>
 </Split>
 
-
 ---
+
+
+<Center>
 
 ## Switch
 
-<Center vert={false}>
-  <SwitchSteps label="Airplane Mode" />
+<SwitchSteps label="Airplane Mode" />
 </Center>
 
 
@@ -238,6 +234,14 @@ Declarative representation of UI
 
 ---
 
+<h1 style={{ color: '#FF19FF', }}>
+  HATEOS
+</h1>
+
+## Hypermedia as the Engine of Application State
+
+---
+
 <Center>
 <CodeSurferLayout>
 
@@ -303,23 +307,11 @@ Declarative representation of UI
 
 ---
 
-<Center>
-<h1 style={{ color: '#4be8ff', }}>
+<Center horiz={false}>
+<h1 style={{ color: '#4be8ff', margin: '5%' }}>
   Microservices: Now you have two problems
 </h1>
-<h3>- (not) Martin Folwer</h3>
 </Center>
-
-
----
-
-<div style={{ marginLeft: '10%', marginTop: '10%', textAlign: 'left'}}>
-
-### C:onsistency: up-to-date
-### A:vailability: response guarenteed
-### P:artition tolerance: resilient to network failures
-
-</div>
 
 ---
 
@@ -363,6 +355,37 @@ Declarative representation of UI
 
 ---
 
+<Center>
+  <Split>
+    <div style={{display: 'grid', gridGap: '0 2em', justifyItems: 'center', alignItems: 'center'}}>
+      <Hero style={{width:'8em', height: '4em', gridRow:'1/2', gridColumn:'1/2'}} />
+      <Appear>
+        <TeaserImage style={{width:'4em', height: '4em', gridRow:'2/3', gridColumn:'1/2' }} />
+        <TeaserText style={{width:'8em', height: '3em', gridRow:'3/4', gridColumn:'1/2'}} />
+      </Appear>
+      <h2 style={{gridRow:'1/2', gridColumn:'2/3', color: '#00CCFF', paddingLeft: '5%'}}>{"{...}"}</h2>
+      <Appear>
+        <h2 style={{gridRow:'2/3', gridColumn:'2/3', color: '#FF19FF'}}>{"{...}"}</h2>
+        <h2 style={{gridRow:'3/4', gridColumn:'2/3', color: '#0DE22B'}}>{"{...}"}</h2>
+      </Appear>
+    </div>
+  </Split>
+</Center>
+
+---
+
+# Components as Data
+
+<API style={{ height: '40%'}} />
+<Center vert={false}>
+  <div style={{display: 'flex', flexDirection: 'row', justifyItems: 'space-around', alignItems: 'center'}}>
+    <Hero style={{width:'3em', height: '1.5em', }} />
+    <TeaserImage style={{width:'2em', height: '2em', margin: '0 0.8em' }} />
+    <TeaserText style={{width:'3em', height: '1em', }} />
+  </div>
+</Center>
+
+---
 
 <Center>
 <CodeSurferLayout>
@@ -420,9 +443,9 @@ Declarative representation of UI
 <iframe 
   src="https://nbc.com"
   style={{
-    padding: '2%',
-    width: '100%',
-    height: '100%',
+    margin: '2%',
+    width: '96%',
+    height: '96%',
   }}
   frameBorder="0"
   title="NBC.com"
@@ -431,12 +454,26 @@ Declarative representation of UI
 
 ---
 
+<IconGrid>
+    <Database style={{ gridRow: '2/3', gridColumn: '1/2' }} />
+    <BusinessLogic style={{ gridRow: '2/3', gridColumn: '2/3' }} />
+    <DataFetching style={{ gridRow: '2/3', gridColumn: '3/4'}} />
+    <FeatureFlag style={{ gridRow: '3/4', gridColumn: '4/5' }} />
+    <ABTest style={{ gridRow: '1/2', gridColumn: '4/5' }} />
+    <Components style={{gridRow: '2/3', gridColumn: '4/5' }} />
+    <Render style={{ gridRow: '2/3', gridColumn: '5/6' }} />
+</IconGrid>
+<DecoupleLine steps={['LEFT']} />
+
+---
+
 <Center>
 
-### Slideshow
+## Slideshow
 #### Slide
-### Shelf
+## Shelf
 #### SeriesTile
+#### VideoTile
 
 </Center>
 
@@ -1031,7 +1068,7 @@ enum SupportedPlatforms {
 ---
 
 <iframe 
-  src="https://h0iw8-4000.sse.codesandbox.io"
+  src="http://localhost:4000/"
   style={{
     padding: '2%',
     width: '100%',
@@ -1042,14 +1079,6 @@ enum SupportedPlatforms {
   title="GraphQL Playground"
 >
 </iframe>
-
----
-
-### Simpler, presentational frontends
-### Centralized business logic
-### Centralized A/B Testing and Feature Flagging
-### Design consistency via a “Design Schema”
-### Query optimization
 
 ---
 
@@ -1673,16 +1702,19 @@ export default function App() {
 
 ---
 
-<IconGrid>
-    <Database style={{ gridRow: '2/3', gridColumn: '1/2' }} />
-    <BusinessLogic style={{ gridRow: '2/3', gridColumn: '2/3' }} />
-    <DataFetching style={{ gridRow: '2/3', gridColumn: '3/4'}} />
-    <FeatureFlag style={{ gridRow: '3/4', gridColumn: '4/5' }} />
-    <ABTest style={{ gridRow: '1/2', gridColumn: '4/5' }} />
-    <Components style={{gridRow: '2/3', gridColumn: '4/5' }} />
-    <Render style={{ gridRow: '2/3', gridColumn: '5/6' }} />
-</IconGrid>
-<DecoupleLine steps={['FAR_LEFT', 'LEFT', 'MID_LEFT', 'FAR_RIGHT', 'RIGHT']} />
+### Simpler, presentational frontends
+### Centralized business logic
+### Centralized A/B Testing and Feature Flagging
+### Design consistency via a “Design Schema”
+### Query optimization
+
+---
+
+<Center>
+
+# Think outside the box
+
+</Center>
 
 ---
 

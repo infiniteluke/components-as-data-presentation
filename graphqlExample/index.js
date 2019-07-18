@@ -217,10 +217,12 @@ server.listen().then(({ url }) => {
  *
  *
 
-# Write your query or mutation here
 {
   page(name: "homepage", userId: "luke", platform: web) {
     component
+    featured {
+      ...slideshow
+ 	  }
     sections {
       ...shelf
     }
@@ -231,9 +233,9 @@ fragment shelf on Shelf {
   component
   data {
     title
-  }
-  items {
-    ...seriesTile
+    items {
+      ...seriesTile
+    }
   }
 }
 
@@ -245,6 +247,22 @@ fragment seriesTile on SeriesTile {
   }
 }
 
+fragment slideshow on Slideshow {
+  component
+  data {
+    items {
+      ...slide
+    }    
+  }
+}
+
+fragment slide on Slide {
+  component
+  data {
+    image
+    title
+  }
+}
 
  *
  */
