@@ -254,7 +254,14 @@ const server = new ApolloServer({
   resolvers,
   // For demo purposes. Don't do this in production.
   introspection: true,
-  playground: true,
+  playground: {
+    tabs: [
+      {
+        'Example Page Query',
+        query: defaultQuery,
+      },
+    ],
+  }
 });
 
 exports.handler = server.createHandler();
