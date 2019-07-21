@@ -13,13 +13,11 @@
     "nodemon": "1.18.4"
   },
   "dependencies": {
-    "apollo-server": "2.6.9",
+    "apollo-server-lambda": "^2.7.0",
     "code-surfer": "2.0.0-alpha.9",
     "graphql": "14.4.2",
-    "graphql-voyager": "1.0.0-rc.27",
-    "raw-loader": "3.0.0",
-    "react-spring": "8.0.25",
-    "styled-components": "4.3.2"
+    "netlify-lambda": "^1.5.0",
+    "react-spring": "8.0.25"
   },
   "keywords": [
     "api",

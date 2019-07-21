@@ -1,4 +1,4 @@
-const { ApolloServer, gql } = require('apollo-server');
+import { ApolloServer, gql } from "apollo-server-lambda";
 
 // Construct a schema, using GraphQL schema language
 const typeDefs = gql`
@@ -202,22 +202,7 @@ const resolvers = {
   }
 };
 
-const server = new ApolloServer({
-  typeDefs,
-  resolvers
-});
-
-server.listen().then(({ url }) => {
-  console.log(`🚀 Server ready at ${url}`);
-});
-
-// sample query
-
-/**
- *
- *
-
-{
+const defaultQuery = `{
   page(name: "homepage", userId: "luke", platform: web) {
     component
     featured {
@@ -262,7 +247,14 @@ fragment slide on Slide {
     image
     title
   }
-}
+}`
 
- *
- */
+const server = new ApolloServer({
+  typeDefs,
+  resolvers,
+  // For demo purposes. Don't do this in production.
+  introspection: true,
+  playground: true,
+});
+
+exports.handler = server.createHandler();
