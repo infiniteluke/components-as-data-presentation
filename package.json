@@ -4,7 +4,7 @@
   "version": "2.4.0",
   "scripts": {
     "start": "mdx-deck deck.mdx",
-    "build": "mdx-deck build deck.mdx",
+    "build": "mdx-deck build deck.mdx; netlify-lambda build functions",
     "start-graphql": "nodemon ./graphqlExample/index.js localhost 4000",
     "help": "mdx-deck"
   },
