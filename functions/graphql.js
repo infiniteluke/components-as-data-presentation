@@ -257,7 +257,7 @@ const server = new ApolloServer({
   playground: {
     tabs: [
       {
-        'Example Page Query',
+        endpoint: 'graphql',
         query: defaultQuery,
       },
     ],
