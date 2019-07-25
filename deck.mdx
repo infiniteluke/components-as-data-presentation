@@ -419,7 +419,7 @@ Declarative representation of UI
 }
 ```
 
-```json 2 subtitle="Components as Data Example"
+```json 2 subtitle="The component field maps to your component lib"
 {
   "component": "Hero",
   "data": {
@@ -430,7 +430,7 @@ Declarative representation of UI
 }
 ```
 
-```json 3:7 subtitle="Components as Data Example"
+```json 3:7 subtitle="The data field is passed as props to the component"
 {
   "component": "Hero",
   "data": {
@@ -514,7 +514,7 @@ Declarative representation of UI
 <Center>
 <CodeSurferLayout>
 
-```graphql 1:17
+```graphql 1:17 subtitle="We decouple a component from its data for reuse"
 interface Component {
   component: String!
   treatment: String
@@ -627,7 +627,7 @@ type Query {
 }
 ```
 
-```graphql 18:37
+```graphql 18:37 subtitle="A shelf has a title and tiles"
 interface Component {
   component: String!
   treatment: String
@@ -740,7 +740,7 @@ type Query {
 }
 ```
 
-```graphql 34:48
+```graphql 34:48  subtitle="A shelf is a Section and a Component"
 interface Component {
   component: String!
   treatment: String
@@ -853,7 +853,7 @@ type Query {
 }
 ```
 
-```graphql 50:64
+```graphql 50:64 subtitle="A slideshow is featured. It's not a section"
 interface Component {
   component: String!
   treatment: String
@@ -966,7 +966,7 @@ type Query {
 }
 ```
 
-```graphql 75:93
+```graphql 75:93 subtitle="A page component has slots for respective interfaces"
 interface Component {
   component: String!
   treatment: String
