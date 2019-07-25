@@ -13,6 +13,7 @@ import Switcher from './components/Switcher';
 import SwitchSteps from './components/SwitchSteps';
 import { SwitchRow, SettingsList } from './components/SwitchHelpers';
 
+import Phone from './components/Phone'
 import PhoneWithContent from './components/PhoneWithContent'
 import TabletWithContent from './components/TabletWithContent'
 import LaptopWithContent from './components/LaptopWithContent'
@@ -140,20 +141,32 @@ Declarative representation of UI
 ## Components Compose
 
 <Center vert={false}>
-  <SlideIn>
-    <SwitchRow key="1">
-      <Switcher label="Airplane Mode" />
+    <SwitchRow style={{ gridColumn: '1/4', gridRow: '1/3' }} key="1">
+      <SwitchSteps label="Airplane Mode" />
     </SwitchRow>
-    <Appear>
-      <SwitchRow key="2">
-        <Switcher label="WiFi" />
-      </SwitchRow>
-      <SwitchRow key="3">
-        <Switcher label="Low Power Mode" />
-      </SwitchRow>    
-    </Appear>
-  </SlideIn>
 </Center>
+
+
+---
+
+  <Phone style={{ position: 'absolute', top: '-20%', left: '50%', transform: 'translate(-50%, 20%)' }} size="2">
+    <h2 style={{ gridColumn: '1/4', gridRow: '1/2', width: '100%', textAlign: 'left', margin: '0', alignSelf: 'flex-end', marginBottom: '2%' }}>Settings</h2>
+    <SwitchRow style={{ gridColumn: '1/4', gridRow: '2/3', width: '100%' }} key="1">
+      <SwitchSteps label="Airplane" />
+    </SwitchRow>
+    <SwitchRow style={{ gridColumn: '1/4', gridRow: '3/4', width: '100%' }} key="2">
+      <Switcher label="WiFi" />
+    </SwitchRow>
+    <SwitchRow style={{ gridColumn: '1/4', gridRow: '4/5', width: '100%' }} key="3">
+      <Switcher label="VPN" />
+    </SwitchRow>
+    <SwitchRow style={{ gridColumn: '1/4', gridRow: '5/6', width: '100%' }} key="3">
+      <Switcher label="Bluetooth" />
+    </SwitchRow>
+    <SwitchRow style={{ gridColumn: '1/4', gridRow: '6/7', width: '100%' }} key="3">
+      <Switcher label="Notifications" />
+    </SwitchRow>
+  </Phone>
 
 
 ---
