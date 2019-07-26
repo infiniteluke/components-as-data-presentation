@@ -12,7 +12,7 @@ exports.handler = (event, context, cb) => {
   <div id="voyager">Loading...</div>
   <script>
     function introspectionProvider(query) {
-      return fetch(window.location.origin + '/graphql', {
+      return fetch(window.location.origin + '/.netlify/functions/graphql', {
         method: 'post',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({query: query}),
