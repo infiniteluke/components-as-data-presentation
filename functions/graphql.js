@@ -111,6 +111,11 @@ const typeDefs = gql`
       userId: String!
       platform: SupportedPlatforms!
     ): Page
+
+    continueWatchingShelf(
+      userId: String!
+      platform: SupportedPlatforms!
+    ): Shelf
   }
 `;
 
@@ -198,6 +203,57 @@ const resolvers = {
           }
         ]
       };
+    },
+    continueWatchingShelf: (root, args, context) => {
+      return           {
+        __typename: 'Shelf',
+        component: 'Shelf',
+        data: {
+          title: 'Continue Watching',
+          items: [
+            {
+              __typename: 'VideoTile',
+              component: 'VideoTile',
+              data: {
+                image: 'https://via.placeholder.com/700x400',
+                percentViewed: .12,
+                title: 'S3 E1 | 07/25/2019',
+                secondaryTitle: 'This Is Us'
+              }
+            },
+            {
+              __typename: 'VideoTile',
+              component: 'VideoTile',
+              data: {
+                image: 'https://via.placeholder.com/700x400',
+                percentViewed: .93,
+                title: 'S4 E6 | 07/25/2019',
+                secondaryTitle: 'Keeping Up With The Karadashians'
+              }
+            },
+            {
+              __typename: 'VideoTile',
+              component: 'VideoTile',
+              data: {
+                image: 'https://via.placeholder.com/700x400',
+                percentViewed: .42,
+                title: 'S12 E20 | 07/25/2019',
+                secondaryTitle: 'The Blacklist'
+              }
+            },
+            {
+              __typename: 'VideoTile',
+              component: 'VideoTile',
+              data: {
+                image: 'https://via.placeholder.com/700x400',
+                percentViewed: .78,
+                title: 'S1 E4 | 07/25/2019',
+                secondaryTitle: 'Songland'
+              }
+            }
+          ]
+        }
+      }
     }
   }
 };
@@ -249,6 +305,41 @@ fragment slide on Slide {
   }
 }`
 
+const withVideoTilesShelfQuery = `{
+  continueWatchingShelf(userId: "luke", platform: web) {
+    ...shelf
+  }
+}
+
+fragment shelf on Shelf {
+  component
+  data {
+    title
+    items {
+      ...seriesTile
+      ...videoTile
+    }
+  }
+}
+
+fragment seriesTile on SeriesTile {
+  component
+  data {
+    image
+    title
+  }
+}
+
+fragment videoTile on VideoTile {
+  component
+  data {
+    image
+    title
+    secondaryTitle
+    percentViewed
+  }
+}`;
+
 const introspectionQuery = `
 {
   __schema {
@@ -272,6 +363,10 @@ const server = new ApolloServer({
       {
         endpoint: 'graphql',
         query: defaultQuery,
+      },
+      {
+        endpoint: 'graphql',
+        query: withVideoTilesShelfQuery,
       },
       {
         endpoint: 'graphql',
