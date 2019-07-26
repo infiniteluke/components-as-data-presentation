@@ -249,6 +249,19 @@ fragment slide on Slide {
   }
 }`
 
+const introspectionQuery = `
+{
+  __schema {
+    types {
+      name
+      interfaces {
+        name
+      }
+    }
+  }
+}
+`
+
 const server = new ApolloServer({
   typeDefs,
   resolvers,
@@ -259,6 +272,10 @@ const server = new ApolloServer({
       {
         endpoint: 'graphql',
         query: defaultQuery,
+      },
+      {
+        endpoint: 'graphql',
+        query: introspectionQuery,
       },
     ],
   }
