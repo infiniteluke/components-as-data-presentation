@@ -12,7 +12,8 @@ export function useFadeinChildren(children) {
   return trail.map((props, index) => {
     const child = children[index];
     return React.cloneElement(child, {
-      style: { ...child.props.style, ...props, key: index }
+      style: { ...child.props.style, ...props },
+      key: index
     });
   });
 }
@@ -26,7 +27,8 @@ export function useSlideInChildren(children) {
     const child = Array.isArray(children) ? children[index] : children;
     const style = child.props ? child.props.style : {};
     return React.cloneElement(child, {
-      style: { ...style, ...props, key: index }
+      style: { ...style, ...props },
+      key: index
     });
   });
 }
@@ -40,7 +42,8 @@ export function useBlurInChildren(children) {
     const child = Array.isArray(children) ? children[index] : children;
     const style = child.props ? child.props.style : {};
     return React.cloneElement(child, {
-      style: { ...style, ...props, key: index }
+      style: { ...style, ...props },
+      key: index
     });
   });
 }
@@ -60,8 +63,8 @@ export function useZoomChildrenSteps(children) {
     return React.cloneElement(
       child,
       index === step
-        ? { style: { ...style, ...zoomed } }
-        : { style: { ...style, ...normal } }
+        ? { style: { ...style, ...zoomed }, key: index }
+        : { style: { ...style, ...normal }, key: index }
     );
   });
 }

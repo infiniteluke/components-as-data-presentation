@@ -1,7 +1,8 @@
 import React from 'react';
+import { animated } from 'react-spring';
 
 export const SwitchRow = ({ style, children }) => (
-  <div
+  <animated.div
     style={{
       display: 'flex',
       flexDirection: 'row',
@@ -16,7 +17,7 @@ export const SwitchRow = ({ style, children }) => (
     }}
   >
     {children}
-  </div>
+  </animated.div>
 );
 
 export const SettingsList = ({ children }) => (
