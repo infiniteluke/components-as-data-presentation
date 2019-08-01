@@ -25,7 +25,7 @@ const SIZED = [
   }
 ];
 
-export default ({ style, children, size = 0 }) => {
+export default ({ style, children, screenTitle, size = 0 }) => {
   const items = useFadeinChildren(children);
 
   return (
@@ -56,6 +56,7 @@ export default ({ style, children, size = 0 }) => {
             height: '100%'
           }}
         >
+          {screenTitle ? <h2 style={{ gridColumn: '1/4', gridRow: '1/2', width: '100%', textAlign: 'left', margin: '0', alignSelf: 'flex-end', marginTop: '6%', marginLeft: '6%' }}>{screenTitle}</h2> : null}
           <div
             style={{
               padding: `${SIZED[size].bezelPadding}%`,
