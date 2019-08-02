@@ -5,6 +5,7 @@ import {
 } from '@mdx-deck/layouts'
 import { CodeSurferLayout } from "code-surfer"
 
+import Iframe from './components/Iframe'
 import Hero from './components/Hero'
 import TeaserText from './components/TeaserText'
 import TeaserImage from './components/TeaserImage'
@@ -459,17 +460,11 @@ Declarative representation of UI
 
 ---
 
-<iframe 
+<Iframe 
   src="https://nbc.com"
-  style={{
-    margin: '2%',
-    width: '96%',
-    height: '96%',
-  }}
-  frameBorder="0"
   title="NBC.com"
 >
-</iframe>
+</Iframe>
 
 ---
 
@@ -1086,18 +1081,11 @@ enum SupportedPlatforms {
 
 ---
 
-<iframe 
+<Iframe 
   src="https://componentsasdata.lukeherrington.com/.netlify/functions/graphql"
-  style={{
-    padding: '2%',
-    width: '100%',
-    height: '100%'
-  }}
-  frameBorder="0"
-  scrolling="no"
   title="GraphQL Playground"
 >
-</iframe>
+</Iframe>
 
 ---
 
@@ -1109,18 +1097,11 @@ enum SupportedPlatforms {
 
 ---
 
-<iframe 
+<Iframe 
   src="https://componentsasdata.lukeherrington.com/.netlify/functions/voyager"
-  style={{
-    padding: '2%',
-    width: '100%',
-    height: '100%'
-  }}
-  frameBorder="0"
-  scrolling="no"
   title="GraphQL Voyager"
 >
-</iframe>
+</Iframe>
 
 ---
 
