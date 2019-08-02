@@ -460,7 +460,8 @@ Declarative representation of UI
 
 ---
 
-<Iframe 
+<Iframe
+  fallback={<img style={{ height: '100%' }} src="./images/nbcdotcomhomepage.gif" />}
   src="https://nbc.com"
   title="NBC.com"
 >
@@ -1075,13 +1076,13 @@ enum SupportedPlatforms {
 }
 ```
 
-
 </CodeSurferLayout>
 </Center>
 
 ---
 
-<Iframe 
+<Iframe
+  fallback={<img style={{ height: '100%' }} src="./images/graphql-componentsasdata.gif" />}
   src="https://componentsasdata.lukeherrington.com/.netlify/functions/graphql"
   title="GraphQL Playground"
 >
@@ -1098,6 +1099,7 @@ enum SupportedPlatforms {
 ---
 
 <Iframe 
+  fallback={<img style={{ height: '100%' }} src="./images/voyager-componentsasdata.gif" />}
   src="https://componentsasdata.lukeherrington.com/.netlify/functions/voyager"
   title="GraphQL Voyager"
 >
