@@ -3,9 +3,8 @@
   "name": "components-as-data-presentation",
   "version": "2.4.0",
   "scripts": {
-    "start": "mdx-deck deck.mdx",
-    "build": "mdx-deck build deck.mdx; netlify-lambda build functions",
-    "help": "mdx-deck"
+    "start": "mdx-deck deck.mdx; yarn netlify-lambda serve functions",
+    "build": "mdx-deck build deck.mdx; netlify-lambda build functions"
   },
   "devDependencies": {
     "mdx-deck": "^2.4.0"
