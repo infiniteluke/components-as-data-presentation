@@ -12,14 +12,14 @@
     "concurrently": "^4.1.1",
     "husky": "^3.0.3",
     "lint-staged": "^9.2.1",
-    "mdx-deck": "^2.4.0",
+    "netlify-lambda": "^1.5.0",
     "prettier": "1.18.2"
   },
   "dependencies": {
     "apollo-server-lambda": "^2.7.0",
     "code-surfer": "2.0.0-alpha.9",
     "graphql": "14.4.2",
-    "netlify-lambda": "^1.5.0",
+    "mdx-deck": "^2.4.0",
     "react-spring": "8.0.25"
   },
   "keywords": [
