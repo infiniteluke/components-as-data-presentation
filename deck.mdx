@@ -36,6 +36,7 @@ import SideBySide from './components/layout/SideBySide'
 import TopCenter from './components/TopCenter'
 
 import { SlideIn, BlurIn, ZoomSteps } from './components/lib'
+import config from './config'
 
 export { themes } from './theme'
 
@@ -1081,7 +1082,7 @@ enum SupportedPlatforms {
 
 <Iframe
   fallback={<img style={{ height: '100%' }} src="./images/graphql-componentsasdata.gif" />}
-  src="https://componentsasdata.lukeherrington.com/.netlify/functions/graphql"
+  src={`${config.baseURL}/.netlify/functions/graphql`}
   title="GraphQL Playground"
 >
 </Iframe>
@@ -1098,7 +1099,7 @@ enum SupportedPlatforms {
 
 <Iframe 
   fallback={<img style={{ height: '100%' }} src="./images/voyager-componentsasdata.gif" />}
-  src="https://componentsasdata.lukeherrington.com/.netlify/functions/voyager"
+  src={`${config.baseURL}/.netlify/functions/voyager`}
   title="GraphQL Voyager"
 >
 </Iframe>

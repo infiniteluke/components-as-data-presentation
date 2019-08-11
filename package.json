@@ -3,10 +3,13 @@
   "name": "components-as-data-presentation",
   "version": "2.4.0",
   "scripts": {
-    "start": "mdx-deck deck.mdx; yarn netlify-lambda serve functions",
+    "start": "concurrently \"npm:start-functions\" \"npm:start-deck\"",
+    "start-functions": "yarn netlify-lambda serve functions",
+    "start-deck": "mdx-deck deck.mdx",
     "build": "mdx-deck build deck.mdx; netlify-lambda build functions"
   },
   "devDependencies": {
+    "concurrently": "^4.1.1",
     "mdx-deck": "^2.4.0"
   },
   "dependencies": {
