@@ -248,14 +248,14 @@ Declarative representation of UI
 
 <Center>
 <h1 style={{ color: '#4be8ff', }}>
-  More than just entities
+  More than just "resources"
 </h1>
 </Center>
 
 ---
 
 <h1 style={{ color: '#FF19FF', }}>
-  HATEOS
+  HATEOAS
 </h1>
 
 ## Hypermedia as the Engine of Application State
@@ -451,10 +451,8 @@ Declarative representation of UI
 <Center>
 
 <h1 style={{ color: '#4be8ff', }}>
-  Drupal 101:
+  Separation of concerns
 </h1>
-
-## Don't put logic in templates
 
 </Center>
 
@@ -1108,6 +1106,14 @@ enum SupportedPlatforms {
 ---
 
 <Center>
+  <h1 style={{ color: '#4be8ff' }}>
+    Sample Implementation
+  </h1>
+</Center>
+
+---
+
+<Center>
 <CodeSurferLayout>
 
 ```jsx 3:17 subtitle="Slideshow has state and data from the API"
@@ -1727,11 +1733,24 @@ export default function App() {
 
 ---
 
+<Iframe
+  fallback={<img style={{ height: '100%' }} src="./images/nbcdotcomhomepage.gif" />}
+  src="https://nbc.com"
+  title="NBC.com"
+>
+</Iframe>
+
+---
+
+<Center style={{ fontSize: '.7em'}}>
+
 ### Simpler, presentational frontends
 ### Centralized business logic
 ### Centralized A/B Testing and Feature Flagging
 ### Design consistency via a “Design Schema”
 ### Query optimization
+
+</Center>
 
 ---
 
