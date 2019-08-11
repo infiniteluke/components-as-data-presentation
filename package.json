@@ -5,12 +5,10 @@
   "scripts": {
     "start": "mdx-deck deck.mdx",
     "build": "mdx-deck build deck.mdx; netlify-lambda build functions",
-    "start-graphql": "nodemon ./graphqlExample/index.js localhost 4000",
     "help": "mdx-deck"
   },
   "devDependencies": {
-    "mdx-deck": "^2.4.0",
-    "nodemon": "1.18.4"
+    "mdx-deck": "^2.4.0"
   },
   "dependencies": {
     "apollo-server-lambda": "^2.7.0",
