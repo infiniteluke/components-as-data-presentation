@@ -7,22 +7,22 @@ const SIZED = [
     gridGap: 0.6,
     width: 12,
     bezelPadding: 6,
-    buttonRadius: 1
+    buttonRadius: 1,
   },
   {
     borderRadius: 3,
     gridGap: 0.6,
     width: 25,
     bezelPadding: 6,
-    buttonRadius: 2
+    buttonRadius: 2,
   },
   {
     borderRadius: 5,
     gridGap: 1.2,
     width: 40,
     bezelPadding: 6,
-    buttonRadius: 3
-  }
+    buttonRadius: 3,
+  },
 ];
 
 export default ({ style, children, screenTitle, size = 0 }) => {
@@ -34,7 +34,7 @@ export default ({ style, children, screenTitle, size = 0 }) => {
         position: 'relative',
         width: `${SIZED[size].width}%`,
         paddingBottom: `${52.983 * (SIZED[size].width / SIZED[1].width)}%`,
-        ...style
+        ...style,
       }}
     >
       <div
@@ -44,7 +44,7 @@ export default ({ style, children, screenTitle, size = 0 }) => {
           backgroundColor: '#27282F',
           padding: `${SIZED[size].bezelPadding}%`,
           height: '100%',
-          width: '100%'
+          width: '100%',
         }}
       >
         <div
@@ -53,10 +53,25 @@ export default ({ style, children, screenTitle, size = 0 }) => {
             borderRadius: `${SIZED[size].borderRadius * 0.6}rem`,
             backgroundColor: 'white',
             overflowY: 'scroll',
-            height: '100%'
+            height: '100%',
           }}
         >
-          {screenTitle ? <h2 style={{ gridColumn: '1/4', gridRow: '1/2', width: '100%', textAlign: 'left', margin: '0', alignSelf: 'flex-end', marginTop: '6%', marginLeft: '6%' }}>{screenTitle}</h2> : null}
+          {screenTitle ? (
+            <h2
+              style={{
+                gridColumn: '1/4',
+                gridRow: '1/2',
+                width: '100%',
+                textAlign: 'left',
+                margin: '0',
+                alignSelf: 'flex-end',
+                marginTop: '6%',
+                marginLeft: '6%',
+              }}
+            >
+              {screenTitle}
+            </h2>
+          ) : null}
           <div
             style={{
               padding: `${SIZED[size].bezelPadding}%`,
@@ -64,7 +79,7 @@ export default ({ style, children, screenTitle, size = 0 }) => {
               display: 'grid',
               gridTemplateColumns: 'repeat(3, 1fr)',
               gridTemplateRows: 'repeat(9, 1fr)',
-              height: '136%'
+              height: '136%',
             }}
           >
             {items}
@@ -80,7 +95,7 @@ export default ({ style, children, screenTitle, size = 0 }) => {
           backgroundColor: '#101013',
           position: 'absolute',
           top: '17%',
-          right: '-2%'
+          right: '-2%',
         }}
       />
     </div>

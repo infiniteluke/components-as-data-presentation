@@ -11,7 +11,7 @@ export default ({ children }) => (
       justifyItems: 'center',
       width: '100%',
       height: '100%',
-      padding: '6% 3.37%'
+      padding: '6% 3.37%',
     }}
   >
     {children}

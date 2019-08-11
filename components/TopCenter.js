@@ -8,7 +8,7 @@ export default ({ children }) => (
       left: '50%',
       width: '100%',
       transform: 'translateX(-50%)',
-      whiteSpace: 'nowrap'
+      whiteSpace: 'nowrap',
     }}
   >
     {children}

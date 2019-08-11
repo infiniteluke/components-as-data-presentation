@@ -1,4 +1,4 @@
-import { ApolloServer, gql } from "apollo-server-lambda";
+import { ApolloServer, gql } from 'apollo-server-lambda';
 
 // Construct a schema, using GraphQL schema language
 const typeDefs = gql`
@@ -112,10 +112,7 @@ const typeDefs = gql`
       platform: SupportedPlatforms!
     ): Page
 
-    continueWatchingShelf(
-      userId: String!
-      platform: SupportedPlatforms!
-    ): Shelf
+    continueWatchingShelf(userId: String!, platform: SupportedPlatforms!): Shelf
   }
 `;
 
@@ -137,27 +134,27 @@ const resolvers = {
                 component: 'Slide',
                 data: {
                   image: 'https://via.placeholder.com/700x400',
-                  title: 'This Is Us'
-                }
+                  title: 'This Is Us',
+                },
               },
               {
                 __typename: 'Slide',
                 component: 'Slide',
                 data: {
                   image: 'https://via.placeholder.com/700x400',
-                  title: 'Keeping Up With The Karadashians'
-                }
+                  title: 'Keeping Up With The Karadashians',
+                },
               },
               {
                 __typename: 'Slide',
                 component: 'Slide',
                 data: {
                   image: 'https://via.placeholder.com/700x400',
-                  title: 'Days of Our Lives'
-                }
-              }
-            ]
-          }
+                  title: 'Days of Our Lives',
+                },
+              },
+            ],
+          },
         },
         sections: [
           {
@@ -171,41 +168,41 @@ const resolvers = {
                   component: 'SeriesTile',
                   data: {
                     image: 'https://via.placeholder.com/700x400',
-                    title: 'This Is Us'
-                  }
+                    title: 'This Is Us',
+                  },
                 },
                 {
                   __typename: 'SeriesTile',
                   component: 'SeriesTile',
                   data: {
                     image: 'https://via.placeholder.com/700x400',
-                    title: 'Keeping Up With The Karadashians'
-                  }
+                    title: 'Keeping Up With The Karadashians',
+                  },
                 },
                 {
                   __typename: 'SeriesTile',
                   component: 'SeriesTile',
                   data: {
                     image: 'https://via.placeholder.com/700x400',
-                    title: 'The Blacklist'
-                  }
+                    title: 'The Blacklist',
+                  },
                 },
                 {
                   __typename: 'SeriesTile',
                   component: 'SeriesTile',
                   data: {
                     image: 'https://via.placeholder.com/700x400',
-                    title: 'Songland'
-                  }
-                }
-              ]
-            }
-          }
-        ]
+                    title: 'Songland',
+                  },
+                },
+              ],
+            },
+          },
+        ],
       };
     },
     continueWatchingShelf: (root, args, context) => {
-      return           {
+      return {
         __typename: 'Shelf',
         component: 'Shelf',
         data: {
@@ -216,46 +213,46 @@ const resolvers = {
               component: 'VideoTile',
               data: {
                 image: 'https://via.placeholder.com/700x400',
-                percentViewed: .12,
+                percentViewed: 0.12,
                 title: 'S3 E1 | 07/25/2019',
-                secondaryTitle: 'This Is Us'
-              }
+                secondaryTitle: 'This Is Us',
+              },
             },
             {
               __typename: 'VideoTile',
               component: 'VideoTile',
               data: {
                 image: 'https://via.placeholder.com/700x400',
-                percentViewed: .93,
+                percentViewed: 0.93,
                 title: 'S4 E6 | 07/25/2019',
-                secondaryTitle: 'Keeping Up With The Karadashians'
-              }
+                secondaryTitle: 'Keeping Up With The Karadashians',
+              },
             },
             {
               __typename: 'VideoTile',
               component: 'VideoTile',
               data: {
                 image: 'https://via.placeholder.com/700x400',
-                percentViewed: .42,
+                percentViewed: 0.42,
                 title: 'S12 E20 | 07/25/2019',
-                secondaryTitle: 'The Blacklist'
-              }
+                secondaryTitle: 'The Blacklist',
+              },
             },
             {
               __typename: 'VideoTile',
               component: 'VideoTile',
               data: {
                 image: 'https://via.placeholder.com/700x400',
-                percentViewed: .78,
+                percentViewed: 0.78,
                 title: 'S1 E4 | 07/25/2019',
-                secondaryTitle: 'Songland'
-              }
-            }
-          ]
-        }
-      }
-    }
-  }
+                secondaryTitle: 'Songland',
+              },
+            },
+          ],
+        },
+      };
+    },
+  },
 };
 
 const defaultQuery = `{
@@ -303,7 +300,7 @@ fragment slide on Slide {
     image
     title
   }
-}`
+}`;
 
 const withVideoTilesShelfQuery = `{
   continueWatchingShelf(userId: "luke", platform: web) {
@@ -351,7 +348,7 @@ const introspectionQuery = `
     }
   }
 }
-`
+`;
 
 const server = new ApolloServer({
   typeDefs,
@@ -373,7 +370,7 @@ const server = new ApolloServer({
         query: introspectionQuery,
       },
     ],
-  }
+  },
 });
 
 exports.handler = server.createHandler();

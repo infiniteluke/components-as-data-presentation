@@ -13,7 +13,7 @@ export default ({ style }) => (
       alignItems: 'center',
       width: '100%',
       height: '100%',
-      ...style
+      ...style,
     }}
   >
     <Hero style={{ width: '100%', height: '.9em' }} />

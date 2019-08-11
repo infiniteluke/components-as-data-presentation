@@ -1,7 +1,7 @@
-
-
 exports.handler = (event, context, cb) => {
-  cb(null, { statusCode: 200, body: `<head>
+  cb(null, {
+    statusCode: 200,
+    body: `<head>
   <script src="https://cdn.jsdelivr.net/npm/react@16/umd/react.production.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/react-dom@16/umd/react-dom.production.min.js"></script>
 
@@ -25,5 +25,6 @@ exports.handler = (event, context, cb) => {
     })
   </script>
 </body>
-</html>`})
-}
+</html>`,
+  });
+};

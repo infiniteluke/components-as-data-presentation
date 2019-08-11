@@ -8,7 +8,7 @@ const POSITIONS = [
   'MID_LEFT',
   'MID_RIGHT',
   'RIGHT',
-  'FAR_RIGHT'
+  'FAR_RIGHT',
 ];
 
 const OFFSET = 1.75;
@@ -24,7 +24,7 @@ const SLOT_SIZES = POSITIONS.reduce((acc, cur, index) => {
 const LEFT_STEP_POSITIONS = POSITIONS.reduce(
   (acc, cur, index) => ({
     ...acc,
-    [cur]: SLOT_SIZES[index]
+    [cur]: SLOT_SIZES[index],
   }),
   {}
 );
@@ -51,7 +51,7 @@ export default ({ style, steps = [POSITIONS[0]] }) => {
         borderTopRightRadius: '1em',
         bottom: 0,
         backgroundImage: 'linear-gradient(90deg, #35aa4e, #5dbb71)',
-        ...style
+        ...style,
       }}
     />
   );

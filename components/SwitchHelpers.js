@@ -13,7 +13,7 @@ export const SwitchRow = ({ style, children }) => (
       marginBottom: '20px',
       backgroundColor: '#f3f2f7',
       borderRadius: '20px',
-      ...style
+      ...style,
     }}
   >
     {children}
@@ -24,7 +24,7 @@ export const SettingsList = ({ children }) => (
   <div
     style={{
       display: 'flex',
-      flexDirection: 'column'
+      flexDirection: 'column',
     }}
   >
     {children}

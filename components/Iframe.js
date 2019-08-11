@@ -1,6 +1,6 @@
 import React from 'react';
 
-export default (props) => {
+export default props => {
   const [loading, setLoading] = React.useState(true);
   const [show, setShow] = React.useState(false);
   const [showFallback, setShowFallback] = React.useState(false);
@@ -13,9 +13,9 @@ export default (props) => {
       }
     }, 5000);
     return () => {
-      clearTimeout(timer)
+      clearTimeout(timer);
     };
-  }, [loading, show])
+  }, [loading, show]);
 
   React.useEffect(() => {
     const timer = setTimeout(() => {
@@ -24,19 +24,26 @@ export default (props) => {
       }
     }, 500);
     return () => {
-      clearTimeout(timer)
+      clearTimeout(timer);
     };
-  }, [loading])
+  }, [loading]);
 
   let content = null;
   if (loading) {
-    content = <h1>loading an<br/> iframe lol 🤞🏻</h1>;
+    content = (
+      <h1>
+        loading an
+        <br /> iframe lol 🤞🏻
+      </h1>
+    );
   }
   if (!loading && !show) {
     content = <h1>omg it worked 🎉</h1>;
   }
   if (showFallback) {
-    content = props.fallback || <pre>No fallback provided. You're out of luck</pre>;
+    content = props.fallback || (
+      <pre>No fallback provided. You're out of luck</pre>
+    );
   }
 
   return (
@@ -52,8 +59,7 @@ export default (props) => {
         }}
         frameBorder="0"
         {...props}
-      >
-      </iframe>
+      ></iframe>
     </React.Fragment>
   );
-}
+};

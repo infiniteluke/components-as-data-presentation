@@ -1,54 +1,58 @@
-import { Head, Notes } from 'mdx-deck'
-import { Appear, Image } from '@mdx-deck/components'
-import {
-  Split
-} from '@mdx-deck/layouts'
-import { CodeSurferLayout } from "code-surfer"
+import { Head, Notes } from 'mdx-deck';
+import { Appear, Image } from '@mdx-deck/components';
+import { Split } from '@mdx-deck/layouts';
+import { CodeSurferLayout } from 'code-surfer';
 
-import Iframe from './components/Iframe'
-import Hero from './components/Hero'
-import TeaserText from './components/TeaserText'
-import TeaserImage from './components/TeaserImage'
+import Iframe from './components/Iframe';
+import Hero from './components/Hero';
+import TeaserText from './components/TeaserText';
+import TeaserImage from './components/TeaserImage';
 
 import Switcher from './components/Switcher';
 import SwitchSteps from './components/SwitchSteps';
 import { SwitchRow, SettingsList } from './components/SwitchHelpers';
 
-import Phone from './components/Phone'
-import PhoneWithContent from './components/PhoneWithContent'
-import TabletWithContent from './components/TabletWithContent'
-import LaptopWithContent from './components/LaptopWithContent'
+import Phone from './components/Phone';
+import PhoneWithContent from './components/PhoneWithContent';
+import TabletWithContent from './components/TabletWithContent';
+import LaptopWithContent from './components/LaptopWithContent';
 
-import IconGrid from './components/IconGrid'
-import DecoupleLine from './components/DecoupleLine'
-import Database from './components/Database'
-import BusinessLogic from './components/BusinessLogic'
-import API from './components/API'
-import ABTest from './components/ABTest'
-import Render from './components/Render'
-import Components from './components/Components'
-import DataFetching from './components/DataFetching'
-import FeatureFlag from './components/FeatureFlag'
+import IconGrid from './components/IconGrid';
+import DecoupleLine from './components/DecoupleLine';
+import Database from './components/Database';
+import BusinessLogic from './components/BusinessLogic';
+import API from './components/API';
+import ABTest from './components/ABTest';
+import Render from './components/Render';
+import Components from './components/Components';
+import DataFetching from './components/DataFetching';
+import FeatureFlag from './components/FeatureFlag';
 
-import Center from './components/layout/Center'
-import Jumbo from './components/layout/Jumbo'
-import SideBySide from './components/layout/SideBySide'
-import TopCenter from './components/TopCenter'
+import Center from './components/layout/Center';
+import Jumbo from './components/layout/Jumbo';
+import SideBySide from './components/layout/SideBySide';
+import TopCenter from './components/TopCenter';
 
-import { SlideIn, BlurIn, ZoomSteps } from './components/lib'
-import config from './config'
+import { SlideIn, BlurIn, ZoomSteps } from './components/lib';
+import config from './config';
 
-export { themes } from './theme'
+export { themes } from './theme';
 
-import './global.css'
+import './global.css';
 
 <Head>
   <title>Components as Data, by Luke Herrington</title>
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:site" content="@lukeherrington" />
   <meta name="twitter:title" content="Components as Data" />
-  <meta name="twitter:description" content="A Cross Platform GraphQL Powered Component API" />
-  <meta name="twitter:image" content="https://user-images.githubusercontent.com/1127238/61584159-3300e080-ab11-11e9-906c-302ee8a22ec9.png" />
+  <meta
+    name="twitter:description"
+    content="A Cross Platform GraphQL Powered Component API"
+  />
+  <meta
+    name="twitter:image"
+    content="https://user-images.githubusercontent.com/1127238/61584159-3300e080-ab11-11e9-906c-302ee8a22ec9.png"
+  />
 </Head>
 
 # Hi! 👋🏻 I'm Luke
@@ -58,7 +62,9 @@ import './global.css'
 
 ---
 
-<TopCenter><h1>Components as Data</h1></TopCenter>
+<TopCenter>
+  <h1>Components as Data</h1>
+</TopCenter>
 
 <Split>
 <PhoneWithContent size={2} style={{ zIndex: 1, position: 'absolute', top: '32%', left: '10%' }} />
@@ -71,22 +77,57 @@ import './global.css'
 
 <Center>
   <Split>
-    <div style={{display: 'grid', gridGap: '0 2em', justifyItems: 'center', alignItems: 'center'}}>
-      <Hero style={{width:'8em', height: '4em', gridRow:'1/2', gridColumn:'1/2'}} />
+    <div
+      style={{
+        display: 'grid',
+        gridGap: '0 2em',
+        justifyItems: 'center',
+        alignItems: 'center',
+      }}
+    >
+      <Hero
+        style={{
+          width: '8em',
+          height: '4em',
+          gridRow: '1/2',
+          gridColumn: '1/2',
+        }}
+      />
       <Appear>
-        <TeaserImage style={{width:'4em', height: '4em', gridRow:'2/3', gridColumn:'1/2' }} />
-        <TeaserText style={{width:'8em', height: '3em', gridRow:'3/4', gridColumn:'1/2'}} />
+        <TeaserImage
+          style={{
+            width: '4em',
+            height: '4em',
+            gridRow: '2/3',
+            gridColumn: '1/2',
+          }}
+        />
+        <TeaserText
+          style={{
+            width: '8em',
+            height: '3em',
+            gridRow: '3/4',
+            gridColumn: '1/2',
+          }}
+        />
       </Appear>
-      <h2 style={{gridRow:'1/2', gridColumn:'2/3', color: '#00CCFF'}}>Hero</h2>
+      <h2 style={{ gridRow: '1/2', gridColumn: '2/3', color: '#00CCFF' }}>
+        Hero
+      </h2>
       <Appear>
-        <h2 style={{gridRow:'2/3', gridColumn:'2/3', color: '#FF19FF'}}>Image</h2>
-        <h2 style={{gridRow:'3/4', gridColumn:'2/3', color: '#0DE22B'}}>Teaser</h2>
+        <h2 style={{ gridRow: '2/3', gridColumn: '2/3', color: '#FF19FF' }}>
+          Image
+        </h2>
+        <h2 style={{ gridRow: '3/4', gridColumn: '2/3', color: '#0DE22B' }}>
+          Teaser
+        </h2>
       </Appear>
     </div>
   </Split>
 </Center>
 
 ---
+
 <TopCenter><h1>Components Win</h1></TopCenter>
 <TabletWithContent size={0}  style={{ position: 'absolute', top: '60%', left: '35%', transform: 'translate(-35%, -60%)' }}  />
 <LaptopWithContent size={0}  style={{ position: 'absolute', top: '60%', left: '80%', transform: 'translate(-80%, -60%)' }}  />
@@ -99,7 +140,7 @@ import './global.css'
 <CodeSurferLayout>
 
 ```js
-component = render(props + state)
+component = render(props + state);
 ```
 
 </CodeSurferLayout>
@@ -113,22 +154,24 @@ component = render(props + state)
 <div style={{ margin: '20px'}}>
 
 ### Props
+
 Read-only external data
 
 ### State
+
 Local data that changes over time
 
 </div>
 <div style={{ margin: '20px'}}>
 
 ### Render
+
 Declarative representation of UI
 
 </div>
 </Split>
 
 ---
-
 
 <Center>
 
@@ -137,21 +180,28 @@ Declarative representation of UI
 <SwitchSteps label="Airplane Mode" />
 </Center>
 
-
 ---
 
 ## Components Compose
 
 <Center vert={false}>
-    <SwitchRow style={{ gridColumn: '1/4', gridRow: '1/3' }} key="1">
-      <SwitchSteps label="Airplane Mode" />
-    </SwitchRow>
+  <SwitchRow style={{ gridColumn: '1/4', gridRow: '1/3' }} key="1">
+    <SwitchSteps label="Airplane Mode" />
+  </SwitchRow>
 </Center>
-
 
 ---
 
-<Phone screenTitle="Settings" style={{ position: 'absolute', top: '-20%', left: '50%', transform: 'translate(-50%, 20%)' }} size="2">
+<Phone
+  screenTitle="Settings"
+  style={{
+    position: 'absolute',
+    top: '-20%',
+    left: '50%',
+    transform: 'translate(-50%, 20%)',
+  }}
+  size="2"
+>
   <SwitchRow style={{ gridColumn: '1/4', gridRow: '1/2', width: '100%' }}>
     <SwitchSteps label="Airplane" />
   </SwitchRow>
@@ -169,27 +219,26 @@ Declarative representation of UI
   </SwitchRow>
 </Phone>
 
-
 ---
+
 <IconGrid>
   <ZoomSteps>
     <Database style={{ gridRow: '2/3', gridColumn: '1/2' }} />
     <BusinessLogic style={{ gridRow: '2/3', gridColumn: '2/3' }} />
-    <DataFetching style={{ gridRow: '2/3', gridColumn: '3/4'}} />
+    <DataFetching style={{ gridRow: '2/3', gridColumn: '3/4' }} />
     <FeatureFlag style={{ gridRow: '3/4', gridColumn: '4/5' }} />
     <ABTest style={{ gridRow: '1/2', gridColumn: '4/5' }} />
-    <Components style={{gridRow: '2/3', gridColumn: '4/5' }} />
+    <Components style={{ gridRow: '2/3', gridColumn: '4/5' }} />
     <Render style={{ gridRow: '2/3', gridColumn: '5/6' }} />
   </ZoomSteps>
 </IconGrid>
 
-
 ---
-
 
 <Center>
 
 # Decoupling
+
 ## Who What When Where Why How
 
 </Center>
@@ -198,9 +247,8 @@ Declarative representation of UI
 
 <Center style={{ fonSize: '1.2em' }}>
 
-
 <h1 style={{ color: '#4be8ff', }}>
-  Where? 🤔
+Where? 🤔
 </h1>
 
 </Center>
@@ -227,9 +275,7 @@ Declarative representation of UI
 ---
 
 <Center>
-<h1 style={{ color: '#4be8ff', }}>
-  REST™
-</h1>
+  <h1 style={{ color: '#4be8ff' }}>REST™</h1>
 </Center>
 
 ---
@@ -248,15 +294,13 @@ Declarative representation of UI
 ---
 
 <Center>
-<h1 style={{ color: '#4be8ff', }}>
-  More than just "resources"
-</h1>
+  <h1 style={{ color: '#4be8ff' }}>More than just "resources"</h1>
 </Center>
 
 ---
 
 <h1 style={{ color: '#FF19FF', }}>
-  HATEOAS
+HATEOAS
 </h1>
 
 ## Hypermedia as the Engine of Application State
@@ -268,44 +312,44 @@ Declarative representation of UI
 
 ```json 4:5 title="HATEOS in Action" subtitle="If these exist, create the buttons to fetch more data"
 {
-  "links":{
-    "self":"https://api.test.com/list?page[number]=1&page[size]=100",
-    "next":"https://api.test.com/list?page[number]=2&page[size]=100",
-    "prev":"https://api.test.com/list?page[number]=0&page[size]=100",
-    "last":"https://api.test.com/list?page[number]=33&page[size]=100",
-    "first":"https://api.test.com/list?page[number]=0&page[size]=100"
+  "links": {
+    "self": "https://api.test.com/list?page[number]=1&page[size]=100",
+    "next": "https://api.test.com/list?page[number]=2&page[size]=100",
+    "prev": "https://api.test.com/list?page[number]=0&page[size]=100",
+    "last": "https://api.test.com/list?page[number]=33&page[size]=100",
+    "first": "https://api.test.com/list?page[number]=0&page[size]=100"
   }
 }
 ```
 
 ```json 6 subtitle="last is calculated by dividing the total count by the page size"
 {
-  "links":{
-    "self":"https://api.test.com/list?page[number]=1&page[size]=100",
-    "next":"https://api.test.com/list?page[number]=2&page[size]=100",
-    "prev":"https://api.test.com/list?page[number]=0&page[size]=100",
-    "last":"https://api.test.com/list?page[number]=33&page[size]=100",
-    "first":"https://api.test.com/list?page[number]=0&page[size]=100"
+  "links": {
+    "self": "https://api.test.com/list?page[number]=1&page[size]=100",
+    "next": "https://api.test.com/list?page[number]=2&page[size]=100",
+    "prev": "https://api.test.com/list?page[number]=0&page[size]=100",
+    "last": "https://api.test.com/list?page[number]=33&page[size]=100",
+    "first": "https://api.test.com/list?page[number]=0&page[size]=100"
   }
 }
 ```
 
 ```json 3:4 subtitle="If some links don't exist, don't create the respective UI"
 {
-  "links":{
-    "self":"https://api.test.com/list?page[number]=33&page[size]=100",
-    "prev":"https://api.test.com/list?page[number]=32&page[size]=100",
-    "first":"https://api.test.com/list?page[number]=0&page[size]=100"
+  "links": {
+    "self": "https://api.test.com/list?page[number]=33&page[size]=100",
+    "prev": "https://api.test.com/list?page[number]=32&page[size]=100",
+    "first": "https://api.test.com/list?page[number]=0&page[size]=100"
   }
 }
 ```
 
 ```json 3:5 subtitle="Swapping to an offset or cursor based pager is not leaked to frontends"
 {
-  "links":{
-    "self":"https://api.test.com/list?page[offset]=450&page[limit]=100",
-    "prev":"https://api.test.com/list?page[offset]=350&page[limit]=100",
-    "first":"https://api.test.com/list?page[offset]=0&page[limit]=100"
+  "links": {
+    "self": "https://api.test.com/list?page[offset]=450&page[limit]=100",
+    "prev": "https://api.test.com/list?page[offset]=350&page[limit]=100",
+    "first": "https://api.test.com/list?page[offset]=0&page[limit]=100"
   }
 }
 ```
@@ -329,9 +373,9 @@ Declarative representation of UI
 ---
 
 <Center horiz={false}>
-<h1 style={{ color: '#4be8ff', margin: '5%' }}>
-  Microservices: Now you have two problems
-</h1>
+  <h1 style={{ color: '#4be8ff', margin: '5%' }}>
+    Microservices: Now you have two problems
+  </h1>
 </Center>
 
 ---
@@ -350,16 +394,12 @@ Declarative representation of UI
 ---
 
 <Center>
-<h1 style={{ color: '#4be8ff', }}>
-  Wait.. What?
-</h1>
+  <h1 style={{ color: '#4be8ff' }}>Wait.. What?</h1>
 </Center>
 
 ---
 
-<Center>
-  /get-off-soapbox
-</Center>
+<Center>/get-off-soapbox</Center>
 
 ---
 
@@ -378,16 +418,57 @@ Declarative representation of UI
 
 <Center>
   <Split>
-    <div style={{display: 'grid', gridGap: '0 2em', justifyItems: 'center', alignItems: 'center'}}>
-      <Hero style={{width:'8em', height: '4em', gridRow:'1/2', gridColumn:'1/2'}} />
+    <div
+      style={{
+        display: 'grid',
+        gridGap: '0 2em',
+        justifyItems: 'center',
+        alignItems: 'center',
+      }}
+    >
+      <Hero
+        style={{
+          width: '8em',
+          height: '4em',
+          gridRow: '1/2',
+          gridColumn: '1/2',
+        }}
+      />
       <Appear>
-        <TeaserImage style={{width:'4em', height: '4em', gridRow:'2/3', gridColumn:'1/2' }} />
-        <TeaserText style={{width:'8em', height: '3em', gridRow:'3/4', gridColumn:'1/2'}} />
+        <TeaserImage
+          style={{
+            width: '4em',
+            height: '4em',
+            gridRow: '2/3',
+            gridColumn: '1/2',
+          }}
+        />
+        <TeaserText
+          style={{
+            width: '8em',
+            height: '3em',
+            gridRow: '3/4',
+            gridColumn: '1/2',
+          }}
+        />
       </Appear>
-      <h2 style={{gridRow:'1/2', gridColumn:'2/3', color: '#00CCFF', paddingLeft: '5%'}}>{"{...}"}</h2>
+      <h2
+        style={{
+          gridRow: '1/2',
+          gridColumn: '2/3',
+          color: '#00CCFF',
+          paddingLeft: '5%',
+        }}
+      >
+        {'{...}'}
+      </h2>
       <Appear>
-        <h2 style={{gridRow:'2/3', gridColumn:'2/3', color: '#FF19FF'}}>{"{...}"}</h2>
-        <h2 style={{gridRow:'3/4', gridColumn:'2/3', color: '#0DE22B'}}>{"{...}"}</h2>
+        <h2 style={{ gridRow: '2/3', gridColumn: '2/3', color: '#FF19FF' }}>
+          {'{...}'}
+        </h2>
+        <h2 style={{ gridRow: '3/4', gridColumn: '2/3', color: '#0DE22B' }}>
+          {'{...}'}
+        </h2>
       </Appear>
     </div>
   </Split>
@@ -452,7 +533,7 @@ Declarative representation of UI
 <Center>
 
 <h1 style={{ color: '#4be8ff', }}>
-  Separation of concerns
+Separation of concerns
 </h1>
 
 </Center>
@@ -460,11 +541,12 @@ Declarative representation of UI
 ---
 
 <Iframe
-  fallback={<img style={{ height: '100%' }} src="./images/nbcdotcomhomepage.gif" />}
+  fallback={
+    <img style={{ height: '100%' }} src="./images/nbcdotcomhomepage.gif" />
+  }
   src="https://nbc.com"
   title="NBC.com"
->
-</Iframe>
+></Iframe>
 
 ---
 
@@ -484,9 +566,13 @@ Declarative representation of UI
 <Center>
 
 ## Slideshow
+
 #### Slide
+
 ## Shelf
+
 #### SeriesTile
+
 #### VideoTile
 
 </Center>
@@ -496,8 +582,9 @@ Declarative representation of UI
 <Center>
 
 <h1 style={{ color: '#4be8ff', }}>
-  Why GraphQL
+Why GraphQL
 </h1>
+
 <Appear>
   <h2>Types</h2>
   <h2>Queries</h2>
@@ -1081,35 +1168,39 @@ enum SupportedPlatforms {
 ---
 
 <Iframe
-  fallback={<img style={{ height: '100%' }} src="./images/graphql-componentsasdata.gif" />}
+  fallback={
+    <img
+      style={{ height: '100%' }}
+      src="./images/graphql-componentsasdata.gif"
+    />
+  }
   src={`${config.baseURL}/.netlify/functions/graphql`}
   title="GraphQL Playground"
->
-</Iframe>
+></Iframe>
 
 ---
 
 <Center>
-  <h1 style={{ color: '#0DE22B' }}>
-    Design Schema
-  </h1>
+  <h1 style={{ color: '#0DE22B' }}>Design Schema</h1>
 </Center>
 
 ---
 
-<Iframe 
-  fallback={<img style={{ height: '100%' }} src="./images/voyager-componentsasdata.gif" />}
+<Iframe
+  fallback={
+    <img
+      style={{ height: '100%' }}
+      src="./images/voyager-componentsasdata.gif"
+    />
+  }
   src={`${config.baseURL}/.netlify/functions/voyager`}
   title="GraphQL Voyager"
->
-</Iframe>
+></Iframe>
 
 ---
 
 <Center>
-  <h1 style={{ color: '#4be8ff' }}>
-    Sample Implementation
-  </h1>
+  <h1 style={{ color: '#4be8ff' }}>Sample Implementation</h1>
 </Center>
 
 ---
@@ -1127,10 +1218,7 @@ function Slideshow(props) {
     <div className="slideshow">
       {props.items.map(slide =>
         // Render children with the current slideNumber and the API data
-        renderComponent(
-          COMPONENTS_DICTIONARY,
-          { ...slide, slideNumber }
-        )
+        renderComponent(COMPONENTS_DICTIONARY, { ...slide, slideNumber })
       )}
     </div>
   );
@@ -1150,10 +1238,7 @@ function Shelf(props) {
     <div className="shelf">
       {props.items.map(tile =>
         // Render children with the current slideNumber and the API data
-        renderComponent(
-          COMPONENTS_DICTIONARY,
-          { ...tile, slideNumber }
-        )
+        renderComponent(COMPONENTS_DICTIONARY, { ...tile, slideNumber })
       )}
     </div>
   );
@@ -1175,22 +1260,19 @@ function SeriesTile(props) {
  */
 
 const FEATURED_DICTIONARY = {
-  Slideshow
+  Slideshow,
 };
 
 const COMPONENTS_DICTIONARY = {
   Slide,
-  SeriesTile
+  SeriesTile,
 };
 
 const SECTIONS_DICTIONARY = {
-  Shelf
+  Shelf,
 };
 
-export function renderComponent(
-  DICTIONARY,
-  { component, data }
-) {
+export function renderComponent(DICTIONARY, { component, data }) {
   const Component = DICTIONARY[component];
   if (!Component) {
     return null;
@@ -1228,10 +1310,7 @@ function Slideshow(props) {
     <div className="slideshow">
       {props.items.map(slide =>
         // Render children with the current slideNumber and the API data
-        renderComponent(
-          COMPONENTS_DICTIONARY,
-          { ...slide, slideNumber }
-        )
+        renderComponent(COMPONENTS_DICTIONARY, { ...slide, slideNumber })
       )}
     </div>
   );
@@ -1251,10 +1330,7 @@ function Shelf(props) {
     <div className="shelf">
       {props.items.map(tile =>
         // Render children with the current slideNumber and the API data
-        renderComponent(
-          COMPONENTS_DICTIONARY,
-          { ...tile, slideNumber }
-        )
+        renderComponent(COMPONENTS_DICTIONARY, { ...tile, slideNumber })
       )}
     </div>
   );
@@ -1276,22 +1352,19 @@ function SeriesTile(props) {
  */
 
 const FEATURED_DICTIONARY = {
-  Slideshow
+  Slideshow,
 };
 
 const COMPONENTS_DICTIONARY = {
   Slide,
-  SeriesTile
+  SeriesTile,
 };
 
 const SECTIONS_DICTIONARY = {
-  Shelf
+  Shelf,
 };
 
-export function renderComponent(
-  DICTIONARY,
-  { component, data }
-) {
+export function renderComponent(DICTIONARY, { component, data }) {
   const Component = DICTIONARY[component];
   if (!Component) {
     return null;
@@ -1329,10 +1402,7 @@ function Slideshow(props) {
     <div className="slideshow">
       {props.items.map(slide =>
         // Render children with the current slideNumber and the API data
-        renderComponent(
-          COMPONENTS_DICTIONARY,
-          { ...slide, slideNumber }
-        )
+        renderComponent(COMPONENTS_DICTIONARY, { ...slide, slideNumber })
       )}
     </div>
   );
@@ -1352,17 +1422,14 @@ function Shelf(props) {
     <div className="shelf">
       {props.items.map(tile =>
         // Render children with the current slideNumber and the API data
-        renderComponent(
-          COMPONENTS_DICTIONARY,
-          { ...tile, slideNumber }
-        )
+        renderComponent(COMPONENTS_DICTIONARY, { ...tile, slideNumber })
       )}
     </div>
   );
 }
 
 function SeriesTile(props) {
-  const a = `/shows/${props.urlAlias}`
+  const a = `/shows/${props.urlAlias}`;
   return (
     <div className="seriesTile">
       <Link to={a}>
@@ -1378,22 +1445,19 @@ function SeriesTile(props) {
  */
 
 const FEATURED_DICTIONARY = {
-  Slideshow
+  Slideshow,
 };
 
 const COMPONENTS_DICTIONARY = {
   Slide,
-  SeriesTile
+  SeriesTile,
 };
 
 const SECTIONS_DICTIONARY = {
-  Shelf
+  Shelf,
 };
 
-export function renderComponent(
-  DICTIONARY,
-  { component, data }
-) {
+export function renderComponent(DICTIONARY, { component, data }) {
   const Component = DICTIONARY[component];
   if (!Component) {
     return null;
@@ -1421,7 +1485,6 @@ export default function App() {
 }
 ```
 
-
 ```jsx 58:68 subtitle="These dictionaries match our GraphQL interfaces"
 import React from 'react';
 
@@ -1432,10 +1495,7 @@ function Slideshow(props) {
     <div className="slideshow">
       {props.items.map(slide =>
         // Render children with the current slideNumber and the API data
-        renderComponent(
-          COMPONENTS_DICTIONARY,
-          { ...slide, slideNumber }
-        )
+        renderComponent(COMPONENTS_DICTIONARY, { ...slide, slideNumber })
       )}
     </div>
   );
@@ -1455,17 +1515,14 @@ function Shelf(props) {
     <div className="shelf">
       {props.items.map(tile =>
         // Render children with the current slideNumber and the API data
-        renderComponent(
-          COMPONENTS_DICTIONARY,
-          tile
-        )
+        renderComponent(COMPONENTS_DICTIONARY, tile)
       )}
     </div>
   );
 }
 
 function SeriesTile(props) {
-  const a = `/shows/${props.urlAlias}`
+  const a = `/shows/${props.urlAlias}`;
   return (
     <div className="seriesTile">
       <Link to={a}>
@@ -1481,22 +1538,19 @@ function SeriesTile(props) {
  */
 
 const FEATURED_DICTIONARY = {
-  Slideshow
+  Slideshow,
 };
 
 const COMPONENTS_DICTIONARY = {
   Slide,
-  SeriesTile
+  SeriesTile,
 };
 
 const SECTIONS_DICTIONARY = {
-  Shelf
+  Shelf,
 };
 
-export function renderComponent(
-  DICTIONARY,
-  { component, data }
-) {
+export function renderComponent(DICTIONARY, { component, data }) {
   const Component = DICTIONARY[component];
   if (!Component) {
     return null;
@@ -1534,10 +1588,7 @@ function Slideshow(props) {
     <div className="slideshow">
       {props.items.map(slide =>
         // Render children with the current slideNumber and the API data
-        renderComponent(
-          COMPONENTS_DICTIONARY,
-          { ...slide, slideNumber }
-        )
+        renderComponent(COMPONENTS_DICTIONARY, { ...slide, slideNumber })
       )}
     </div>
   );
@@ -1557,17 +1608,14 @@ function Shelf(props) {
     <div className="shelf">
       {props.items.map(tile =>
         // Render children with the current slideNumber and the API data
-        renderComponent(
-          COMPONENTS_DICTIONARY,
-          tile
-        )
+        renderComponent(COMPONENTS_DICTIONARY, tile)
       )}
     </div>
   );
 }
 
 function SeriesTile(props) {
-  const a = `/shows/${props.urlAlias}`
+  const a = `/shows/${props.urlAlias}`;
   return (
     <div className="seriesTile">
       <Link to={a}>
@@ -1583,22 +1631,19 @@ function SeriesTile(props) {
  */
 
 const FEATURED_DICTIONARY = {
-  Slideshow
+  Slideshow,
 };
 
 const COMPONENTS_DICTIONARY = {
   Slide,
-  SeriesTile
+  SeriesTile,
 };
 
 const SECTIONS_DICTIONARY = {
-  Shelf
+  Shelf,
 };
 
-export function renderComponent(
-  DICTIONARY,
-  { component, data }
-) {
+export function renderComponent(DICTIONARY, { component, data }) {
   const Component = DICTIONARY[component];
   if (!Component) {
     return null;
@@ -1626,7 +1671,6 @@ export default function App() {
 }
 ```
 
-
 ```jsx 81:99 subtitle="Match slots with interface dictionaries and render"
 import React from 'react';
 
@@ -1637,10 +1681,7 @@ function Slideshow(props) {
     <div className="slideshow">
       {props.items.map(slide =>
         // Render children with the current slideNumber and the API data
-        renderComponent(
-          COMPONENTS_DICTIONARY,
-          { ...slide, slideNumber }
-        )
+        renderComponent(COMPONENTS_DICTIONARY, { ...slide, slideNumber })
       )}
     </div>
   );
@@ -1660,17 +1701,14 @@ function Shelf(props) {
     <div className="shelf">
       {props.items.map(tile =>
         // Render children with the current slideNumber and the API data
-        renderComponent(
-          COMPONENTS_DICTIONARY,
-          tile
-        )
+        renderComponent(COMPONENTS_DICTIONARY, tile)
       )}
     </div>
   );
 }
 
 function SeriesTile(props) {
-  const a = `/shows/${props.urlAlias}`
+  const a = `/shows/${props.urlAlias}`;
   return (
     <div className="seriesTile">
       <Link to={a}>
@@ -1686,22 +1724,19 @@ function SeriesTile(props) {
  */
 
 const FEATURED_DICTIONARY = {
-  Slideshow
+  Slideshow,
 };
 
 const COMPONENTS_DICTIONARY = {
   Slide,
-  SeriesTile
+  SeriesTile,
 };
 
 const SECTIONS_DICTIONARY = {
-  Shelf
+  Shelf,
 };
 
-export function renderComponent(
-  DICTIONARY,
-  { component, data }
-) {
+export function renderComponent(DICTIONARY, { component, data }) {
   const Component = DICTIONARY[component];
   if (!Component) {
     return null;
@@ -1735,20 +1770,25 @@ export default function App() {
 ---
 
 <Iframe
-  fallback={<img style={{ height: '100%' }} src="./images/nbcdotcomhomepage.gif" />}
+  fallback={
+    <img style={{ height: '100%' }} src="./images/nbcdotcomhomepage.gif" />
+  }
   src="https://nbc.com"
   title="NBC.com"
->
-</Iframe>
+></Iframe>
 
 ---
 
 <Center style={{ fontSize: '.7em'}}>
 
 ### Simpler, presentational frontends
+
 ### Centralized business logic
+
 ### Centralized A/B Testing and Feature Flagging
+
 ### Design consistency via a “Design Schema”
+
 ### Query optimization
 
 </Center>
@@ -1763,12 +1803,16 @@ export default function App() {
 
 ---
 
-# Thanks! 👋🏻 
+# Thanks! 👋🏻
 
 ## GitHub: [infiniteluke](http://github.com/infiniteluke/)
+
 ## Twitter: [lukeherrington](https://twitter.com/lukeherrington)
 
-<img style={{ width: '15%', position: 'absolute', bottom: '50px', right: '30px'}} src="https://www.fourkitchens.com/wp-content/themes/twentysixteen-4k/img/logos/4k-logo.svg" />
+<img
+  style={{ width: '15%', position: 'absolute', bottom: '50px', right: '30px' }}
+  src="https://www.fourkitchens.com/wp-content/themes/twentysixteen-4k/img/logos/4k-logo.svg"
+/>
 
 ---
 
@@ -1776,11 +1820,11 @@ export default function App() {
 
 <div style={{margin: '0 5%'}}>
 
-* [These slides](https://github.com/infiniteluke/components-as-data-presentation)
-* [React](http://reactjs.org)
-* [SwiftUI](https://developer.apple.com/xcode/swiftui/)
-* [Flutter](https://flutter.dev/docs/development/ui/widgets-intro)
-* [Roy Fielding's REST Disertation](https://www.ics.uci.edu/~fielding/pubs/dissertation/fielding_dissertation_2up.pdf)
+- [These slides](https://github.com/infiniteluke/components-as-data-presentation)
+- [React](http://reactjs.org)
+- [SwiftUI](https://developer.apple.com/xcode/swiftui/)
+- [Flutter](https://flutter.dev/docs/development/ui/widgets-intro)
+- [Roy Fielding's REST Disertation](https://www.ics.uci.edu/~fielding/pubs/dissertation/fielding_dissertation_2up.pdf)
 
 </div>
 
@@ -1790,9 +1834,9 @@ export default function App() {
 
 <div style={{margin: '0 5%'}}>
 
-* [HATEOS](https://roy.gbiv.com/untangled/2008/rest-apis-must-be-hypertext-driven)
-* [JSON:API](https://jsonapi.org)
-* [CRDT](http://radlab.cs.berkeley.edu/people/fox/static/pubs/pdf/c18.pdf)
-* [GraphQL](https://graphql.org)
+- [HATEOS](https://roy.gbiv.com/untangled/2008/rest-apis-must-be-hypertext-driven)
+- [JSON:API](https://jsonapi.org)
+- [CRDT](http://radlab.cs.berkeley.edu/people/fox/static/pubs/pdf/c18.pdf)
+- [GraphQL](https://graphql.org)
 
 </div>

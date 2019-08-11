@@ -6,7 +6,7 @@ export const themes = [
   vsDark,
   {
     prism: {
-      style: atomDark
+      style: atomDark,
     },
     Slide: {
       width: '100%',
@@ -14,19 +14,19 @@ export const themes = [
         paddingBottom: '56.25%',
         position: 'relative',
         width: '100%',
-        height: '0'
+        height: '0',
       },
       '& > div > div': {
         position: 'absolute',
         width: '100%',
-        height: '100%'
-      }
-    }
+        height: '100%',
+      },
+    },
     // Customize your presentation theme here.
     //
     // Read the docs for more info:
     // https://github.com/jxnblk/mdx-deck/blob/master/docs/theming.md
     // https://github.com/jxnblk/mdx-deck/blob/master/docs/themes.md
   },
-  highlight
+  highlight,
 ];

@@ -51,16 +51,16 @@ function SeriesTile(props) {
  */
 
 const FEATURED_DICTIONARY = {
-  Slideshow
+  Slideshow,
 };
 
 const COMPONENTS_DICTIONARY = {
   Slide,
-  SeriesTile
+  SeriesTile,
 };
 
 const SECTIONS_DICTIONARY = {
-  Shelf
+  Shelf,
 };
 
 export function renderComponent(DICTIONARY, { component, data }) {

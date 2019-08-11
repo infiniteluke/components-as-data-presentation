@@ -6,20 +6,20 @@ const SIZED = [
     borderRadius: 1.5,
     width: 40,
     bezelPadding: 3,
-    buttonRadius: 1
+    buttonRadius: 1,
   },
   {
     borderRadius: 3,
     width: 75,
     bezelPadding: 4,
-    buttonRadius: 2
+    buttonRadius: 2,
   },
   {
     borderRadius: 5,
     width: 40,
     bezelPadding: 6,
-    buttonRadius: 3
-  }
+    buttonRadius: 3,
+  },
 ];
 
 export default ({ style, children, size = 2 }) => {
@@ -31,7 +31,7 @@ export default ({ style, children, size = 2 }) => {
         position: 'relative',
         width: `${SIZED[size].width}%`,
         paddingBottom: `${47 * (SIZED[size].width / SIZED[1].width)}%`,
-        ...style
+        ...style,
       }}
     >
       <div
@@ -43,7 +43,7 @@ export default ({ style, children, size = 2 }) => {
           backgroundColor: '#101013',
           position: 'absolute',
           top: '-1%',
-          left: '8%'
+          left: '8%',
         }}
       />
       <div
@@ -55,7 +55,7 @@ export default ({ style, children, size = 2 }) => {
           backgroundColor: '#101013',
           position: 'absolute',
           top: '-1%',
-          left: '13%'
+          left: '13%',
         }}
       />
       <div
@@ -67,7 +67,7 @@ export default ({ style, children, size = 2 }) => {
           backgroundColor: '#101013',
           position: 'absolute',
           top: '15%',
-          left: '-1%'
+          left: '-1%',
         }}
       />
       <div
@@ -77,7 +77,7 @@ export default ({ style, children, size = 2 }) => {
           backgroundColor: '#27282F',
           padding: `${SIZED[size].bezelPadding}%`,
           height: '100%',
-          width: '100%'
+          width: '100%',
         }}
       >
         <div
@@ -86,7 +86,7 @@ export default ({ style, children, size = 2 }) => {
             borderRadius: `${SIZED[size].borderRadius * 0.6}rem`,
             backgroundColor: 'white',
             overflowY: 'scroll',
-            height: '100%'
+            height: '100%',
           }}
         >
           <div
@@ -96,7 +96,7 @@ export default ({ style, children, size = 2 }) => {
               display: 'grid',
               gridTemplateColumns: 'repeat(9, 1fr)',
               gridTemplateRows: 'repeat(7, 1fr)',
-              height: '127%'
+              height: '127%',
             }}
           >
             {items}

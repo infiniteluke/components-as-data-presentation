@@ -4,7 +4,7 @@ export default ({ children, style }) => (
   <div
     style={{
       fontSize: '4rem',
-      ...style
+      ...style,
     }}
   >
     {children}

@@ -6,18 +6,18 @@ const SIZED = [
     borderRadius: 1,
     width: 40,
     bezelPadding: 4,
-    keyboardRadius: 35
+    keyboardRadius: 35,
   },
   {
     borderRadius: 3,
     width: 75,
-    bezelPadding: 4
+    bezelPadding: 4,
   },
   {
     borderRadius: 5,
     width: 40,
-    bezelPadding: 6
-  }
+    bezelPadding: 6,
+  },
 ];
 
 export default ({ style, children, size = 2 }) => {
@@ -29,7 +29,7 @@ export default ({ style, children, size = 2 }) => {
         position: 'relative',
         width: `${SIZED[size].width}%`,
         paddingBottom: `${52 * (SIZED[size].width / SIZED[1].width)}%`,
-        ...style
+        ...style,
       }}
     >
       <div
@@ -40,7 +40,7 @@ export default ({ style, children, size = 2 }) => {
           backgroundColor: '#27282F',
           padding: `${SIZED[size].bezelPadding}%`,
           height: '100%',
-          width: '100%'
+          width: '100%',
         }}
       >
         <div
@@ -49,7 +49,7 @@ export default ({ style, children, size = 2 }) => {
             borderTopLeftRadius: `${SIZED[size].borderRadius * 0.6}rem`,
             backgroundColor: 'white',
             overflow: 'scroll',
-            height: '100%'
+            height: '100%',
           }}
         >
           <div
@@ -60,7 +60,7 @@ export default ({ style, children, size = 2 }) => {
               display: 'grid',
               gridTemplateColumns: 'repeat(9, 1fr)',
               gridTemplateRows: 'repeat(8, 1fr)',
-              height: '131%'
+              height: '131%',
             }}
           >
             {items}
@@ -77,7 +77,7 @@ export default ({ style, children, size = 2 }) => {
           borderBottomRightRadius: `${SIZED[size].keyboardRadius}%`,
           backgroundColor: '#18191d',
           position: 'absolute',
-          bottom: '-1%'
+          bottom: '-1%',
         }}
       />
     </div>
