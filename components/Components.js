@@ -16,8 +16,10 @@ export default ({ style }) => (
       ...style,
     }}
   >
-    <Hero style={{ width: '100%', height: '.9em' }} />
-    <TeaserImage style={{ width: '.9em', height: '.9em', margin: '.08em' }} />
-    <TeaserText style={{ width: '100%', height: '.5em' }} />
+    <Hero style={{ width: '100%', height: '1.2em', borderRadius: '14px' }} />
+    <TeaserImage style={{ width: '1.1em', height: '1.1em', margin: '.08em' }} />
+    <TeaserText
+      style={{ width: '100%', height: '.6em', borderRadius: '10px' }}
+    />
   </div>
 );

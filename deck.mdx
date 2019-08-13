@@ -69,7 +69,11 @@ import './global.css';
 <Split>
 <PhoneWithContent size={2} style={{ zIndex: 1, position: 'absolute', top: '32%', left: '10%' }} />
 
+<div style={{ padding: '11%' }}>
+
 ### A Cross Platform GraphQL Powered Component API
+
+</div>
 
 </Split>
 
@@ -184,7 +188,7 @@ Declarative representation of UI
 
 ## Components Compose
 
-<Center vert={false}>
+<Center vert={false} style={{ marginTop: '15%' }}>
   <SwitchRow style={{ gridColumn: '1/4', gridRow: '1/3' }} key="1">
     <SwitchSteps label="Airplane Mode" />
   </SwitchRow>
@@ -307,18 +311,22 @@ Where? 🤔
 
 ---
 
+<Center>
+
 <h1 style={{ color: '#FF19FF', }}>
 HATEOAS
 </h1>
 
 ## Hypermedia as the Engine of Application State
 
+</Center>
+
 ---
 
 <Center>
 <CodeSurferLayout>
 
-```json 4:5 title="HATEOS in Action" subtitle="If these exist, create the buttons to fetch more data"
+```json 4:5 title="HATEOAS in Action" subtitle="If these exist, create the buttons to fetch more data"
 {
   "links": {
     "self": "https://api.test.com/list?page[number]=1&page[size]=100",
@@ -380,10 +388,9 @@ HATEOAS
 
 ---
 
-<Center horiz={false}>
-  <h1 style={{ color: '#4be8ff', margin: '5%' }}>
-    Microservices: Now you have two problems
-  </h1>
+<Center>
+  <h1>Microservices:</h1>
+  <h2 style={{ color: '#4be8ff', margin: '5%' }}>Now you have two problems</h2>
 </Center>
 
 ---
@@ -403,7 +410,7 @@ HATEOAS
 
 <Center>
   <h1 style={{ color: '#4be8ff' }}>Wait.. What?</h1>
-  <h2>🧐</h2>
+  <h2 style={{ margin: 0, fontSize: '3em' }}>🧐</h2>
 </Center>
 
 ---
