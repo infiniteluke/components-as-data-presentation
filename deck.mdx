@@ -175,7 +175,7 @@ Declarative representation of UI
 
 <Center>
 
-## Switch
+## `<Switch />`
 
 <SwitchSteps label="Airplane Mode" />
 </Center>
@@ -218,6 +218,14 @@ Declarative representation of UI
     <Switcher label="Notifications" />
   </SwitchRow>
 </Phone>
+
+---
+
+<Center>
+
+# I ❤️ Components
+
+</Center>
 
 ---
 
@@ -395,6 +403,7 @@ HATEOAS
 
 <Center>
   <h1 style={{ color: '#4be8ff' }}>Wait.. What?</h1>
+  <h2>🧐</h2>
 </Center>
 
 ---
@@ -1208,7 +1217,7 @@ enum SupportedPlatforms {
 <Center>
 <CodeSurferLayout>
 
-```jsx 3:17 subtitle="Slideshow has state and data from the API"
+```jsx 3:14 subtitle="Slideshow has state and data from the API"
 import React from 'react';
 
 function Slideshow(props) {
@@ -1300,7 +1309,7 @@ export default function App() {
 }
 ```
 
-```jsx 9:14 subtitle="It generically renders its children"
+```jsx 8:11 subtitle="It generically renders its children"
 import React from 'react';
 
 function Slideshow(props) {
@@ -1392,7 +1401,7 @@ export default function App() {
 }
 ```
 
-```jsx 19:26
+```jsx 16:23
 import React from 'react';
 
 function Slideshow(props) {
@@ -1485,7 +1494,7 @@ export default function App() {
 }
 ```
 
-```jsx 58:68 subtitle="These dictionaries match our GraphQL interfaces"
+```jsx 52:63 subtitle="These dictionaries match our GraphQL interfaces"
 import React from 'react';
 
 function Slideshow(props) {
@@ -1578,7 +1587,7 @@ export default function App() {
 }
 ```
 
-```jsx 69:80 subtitle="Generically render a component from the API"
+```jsx 65:71 subtitle="Generically render a component from the API"
 import React from 'react';
 
 function Slideshow(props) {
@@ -1671,7 +1680,7 @@ export default function App() {
 }
 ```
 
-```jsx 81:99 subtitle="Match slots with interface dictionaries and render"
+```jsx 73:90 subtitle="Match slots with interface dictionaries and render"
 import React from 'react';
 
 function Slideshow(props) {
@@ -1769,27 +1778,33 @@ export default function App() {
 
 ---
 
-<Iframe
-  fallback={
-    <img style={{ height: '100%' }} src="./images/nbcdotcomhomepage.gif" />
-  }
-  src="https://nbc.com"
-  title="NBC.com"
-></Iframe>
+<Center style={{ fontSize: '.7em'}}>
+
+<h1 style={{ color: '#4be8ff' }}>The Hard Parts</h1>
+
+## Fragmented Business logic
+
+## Variance across platforms
+
+## Pagination/Lazy Loading
+
+</Center>
 
 ---
 
-<Center style={{ fontSize: '.7em'}}>
+<Center style={{ fontSize: '.6em'}}>
 
-### Simpler, presentational frontends
+<h1 style={{ color: '#0DE22B' }}>The Good Parts</h1>
 
-### Centralized business logic
+## Simpler, presentational frontends
 
-### Centralized A/B Testing and Feature Flagging
+## Centralized business logic
 
-### Design consistency via a “Design Schema”
+## Centralized A/B Testing and Feature Flagging
 
-### Query optimization
+## Design consistency via a “Design Schema”
+
+## Query optimization
 
 </Center>
 

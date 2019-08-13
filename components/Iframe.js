@@ -19,14 +19,14 @@ export default props => {
 
   React.useEffect(() => {
     const timer = setTimeout(() => {
-      if (!loading) {
+      if (!loading && !showFallback) {
         setShow(true);
       }
     }, 500);
     return () => {
       clearTimeout(timer);
     };
-  }, [loading]);
+  }, [loading, showFallback]);
 
   let content = null;
   if (loading) {
