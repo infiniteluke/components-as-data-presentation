@@ -1065,7 +1065,7 @@ type Query {
 }
 ```
 
-```graphql 75:93 subtitle="A page component has slots for respective interfaces"
+```graphql 77:93 subtitle="A page component has slots for respective interfaces"
 interface Component {
   component: String!
   treatment: String
@@ -1158,23 +1158,6 @@ type Query {
     userId: String!
     platform: SupportedPlatforms!
   ): Page
-}
-
-enum SupportedPlatforms {
-  iOS
-  tvOS
-  roku
-  rokuStick
-  samsungTv
-  android
-  androidTv
-  xboxOne
-  web
-  mobileWeb
-  fireTablet
-  fireTv
-  fireTvStick
-  vizio
 }
 ```
 
