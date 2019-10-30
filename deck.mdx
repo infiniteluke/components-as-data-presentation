@@ -328,7 +328,7 @@ HATEOAS
 <Center>
 <CodeSurferLayout>
 
-```json 4:5 title="HATEOAS in Action" subtitle="If these exist, create the buttons to fetch more data"
+```json subtitle="If these exist, create the buttons to fetch more data"
 {
   "links": {
     "self": "https://api.test.com/list?page[number]=1&page[size]=100",
@@ -336,38 +336,6 @@ HATEOAS
     "prev": "https://api.test.com/list?page[number]=0&page[size]=100",
     "last": "https://api.test.com/list?page[number]=33&page[size]=100",
     "first": "https://api.test.com/list?page[number]=0&page[size]=100"
-  }
-}
-```
-
-```json 6 subtitle="last is calculated by dividing the total count by the page size"
-{
-  "links": {
-    "self": "https://api.test.com/list?page[number]=1&page[size]=100",
-    "next": "https://api.test.com/list?page[number]=2&page[size]=100",
-    "prev": "https://api.test.com/list?page[number]=0&page[size]=100",
-    "last": "https://api.test.com/list?page[number]=33&page[size]=100",
-    "first": "https://api.test.com/list?page[number]=0&page[size]=100"
-  }
-}
-```
-
-```json 3:4 subtitle="If some links don't exist, don't create the respective UI"
-{
-  "links": {
-    "self": "https://api.test.com/list?page[number]=33&page[size]=100",
-    "prev": "https://api.test.com/list?page[number]=32&page[size]=100",
-    "first": "https://api.test.com/list?page[number]=0&page[size]=100"
-  }
-}
-```
-
-```json 3:5 subtitle="Swapping to an offset or cursor based pager is not leaked to frontends"
-{
-  "links": {
-    "self": "https://api.test.com/list?page[offset]=450&page[limit]=100",
-    "prev": "https://api.test.com/list?page[offset]=350&page[limit]=100",
-    "first": "https://api.test.com/list?page[offset]=0&page[limit]=100"
   }
 }
 ```
@@ -434,6 +402,19 @@ HATEOAS
 
 ---
 
+# Components as Data
+
+<API style={{ height: '40%'}} />
+<Center vert={false}>
+  <div style={{display: 'flex', flexDirection: 'row', justifyItems: 'space-around', alignItems: 'center'}}>
+    <Hero style={{width:'3em', height: '1.5em', }} />
+    <TeaserImage style={{width:'2em', height: '2em', margin: '0 0.8em' }} />
+    <TeaserText style={{width:'3em', height: '1em', }} />
+  </div>
+</Center>
+
+---
+
 <Center>
   <Split>
     <div
@@ -490,19 +471,6 @@ HATEOAS
       </Appear>
     </div>
   </Split>
-</Center>
-
----
-
-# Components as Data
-
-<API style={{ height: '40%'}} />
-<Center vert={false}>
-  <div style={{display: 'flex', flexDirection: 'row', justifyItems: 'space-around', alignItems: 'center'}}>
-    <Hero style={{width:'3em', height: '1.5em', }} />
-    <TeaserImage style={{width:'2em', height: '2em', margin: '0 0.8em' }} />
-    <TeaserText style={{width:'3em', height: '1em', }} />
-  </div>
 </Center>
 
 ---
@@ -1790,9 +1758,9 @@ export default function App() {
 
 ## Simpler, presentational frontends
 
-## Centralized business logic
+## Shared business logic
 
-## Centralized A/B Testing and Feature Flagging
+## Shared A/B Testing and Feature Flagging
 
 ## Design consistency via a “Design Schema”
 
