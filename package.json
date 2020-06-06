@@ -16,7 +16,7 @@
     "prettier": "1.18.2"
   },
   "dependencies": {
-    "apollo-server-lambda": "^2.7.0",
+    "apollo-server-lambda": "^2.14.2",
     "code-surfer": "2.0.0-alpha.9",
     "graphql": "14.4.2",
     "mdx-deck": "^2.4.0",
